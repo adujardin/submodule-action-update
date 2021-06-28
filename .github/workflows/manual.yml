@@ -27,8 +27,16 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
     - name: Checkout submodules
       run: git submodule update --init --recursive
+      
+    # Update references
+    - name: Git Sumbodule Update
+      run: |
+        git pull --recurse-submodules
+        git submodule update --remote --recursive
+      
     - name: Checking versions
       run: |
         cd foobar ; git status
