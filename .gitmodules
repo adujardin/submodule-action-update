@@ -1,0 +1,6 @@
+[submodule "zed-python-api"]
+	path = zed-python-api
+	url = https://github.com/stereolabs/zed-python-api/
+[submodule "foobar"]
+	path = foobar
+	url = https://github.com/adujardin/foobar.git
