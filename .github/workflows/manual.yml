@@ -1,4 +1,4 @@
-name: Manual submodule update workflow
+name: Submodule update (manual)
 
 on:
   #schedule:
