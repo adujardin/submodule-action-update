@@ -25,12 +25,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Checkout submodules
       uses: srt32/git-actions@v0.0.3
       with:
         args: git submodule update --init --recursive
+    - name: Checking versions
+      run: |
+        cd foobar ; git status
+        cd ../zed-python-api ; git status
